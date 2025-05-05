@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../UNIR_Marcas2024-master"
+		},
+		{
+			"path": "../TelleriaGuadalajara_Michael_nov24"
+		},
+		{
+			"path": "../Actividad 2_Web Corporativa HTML y CSS"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "TelleriaGuadalajara_Michael_nov24"
+	}
+}

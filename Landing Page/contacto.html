@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style_contacto.css" />
+    <title>Contacto</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="ckbox">
+            <label for="ckbox" class="drawer">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </label>
+            <h1>Contacto</h1>
+            <ul class="menu-box">
+                <li>
+                    <a href="./quien_soy.html">Quien soy</a>
+                </li>
+                <li>
+                    <a href="./CV.html">CV</a>
+                </li>
+                <li>
+                    <a href="./Proyectos.html">Proyectos</a>
+                </li>
+                <li>
+                    <a href="./contacto.html">Contactos</a>
+                </li>
+                <li>
+                    <a href="./sobre_mi.html">Dar la vuelta</a>
+                </li>
+                <li>
+                    <a href="./index.html">Home</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="form_registro">
+        <form action="mailto:michael13guadalajara@gmail.com" method="post" enctype="text/plain">
+            <h4>Formulario de registro</h4>
+            <label for="nombre">Nombre</label>
+            <input class="datos" type="text" name="nombre" id="nombre" placeholder="ingresa tu nombre " required />
+            <label for="apellido">apellido</label>
+            <input class="datos" type="text" name="apelillo" id="apellido" placeholder="ingresa tu apelillo "required />
+            <label for="correo">Correo</label>
+            <input class="datos" type="text" name="correo" id="correo" placeholder="ingresa tu correo " required />
+            <label for="Telefono">Telefono</label>
+            <input class="datos" type="text" name="Telefono" id="Telefono" placeholder="xxx-xxx-xxx " required />
+            <label for="Empresa">Empresa</label>
+            <input class="datos" type="text" name="Empresa" id="Empresa" placeholder="Nombre de la Empresa "/>
+            <label for="Motivo">Motivo de contacto</label>
+            <textarea class="text" name="Motivo" id="Motivo" placeholder="Describe el motivo de tu contacto"
+                required></textarea>
+            <input class="botones" type="button" value="Enviar" />
+            <input class="botones" type="button" value="Borrar" />
+        </form>
+    </section>
+</body>
+
+</html>
+
+</html>

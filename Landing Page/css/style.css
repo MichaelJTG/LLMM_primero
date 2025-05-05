@@ -1,0 +1,367 @@
+@font-face {
+    font-family: 'dune' ;
+    src: url('../font/Dune_Rise.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    --fuente-dune:'dune';
+}
+body{
+    /* ubicacion de la imagen de fondo */
+   background-image: url(../img/mapa.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: scroll;
+}
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+header{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'dune';
+}
+/* header .logo{ 
+    donde esta mi nombre 
+    position: absolute;
+    top: 28%;
+    color: #fff;
+    font-size: 2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-family: 'dune';
+    font-weight: 600;
+    z-index: 10;
+}*/
+header .logo:hover{/*Con esto hago el cambio de color de mi nombre*/
+    color:black;
+    background-color:gold;
+    transition: 1s;
+}
+header .navbar {/*damos la posicion de las bara relativa*/
+    position: relative;
+    
+}
+header .navbar li{
+    list-style: none;
+    margin-left: 30px;
+   
+}
+header .navbar li a{/* cambiamos la forma*/
+    text-decoration:none;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px;
+    transition: 0.3s;
+    font-size: 0.9em;
+    text-transform: uppercase;
+
+}
+header .navbar li a:hover{/* con este se subraya la parte de arriba*/
+    color: #fff;
+    background: black;
+    transition: 0.5s;
+    border-radius: 40px;
+}
+/*contenido de la web*/
+.contenido{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40vh;
+    font-family: 'dune';
+    z-index: 0;
+}
+.contenido .titulobox{/*el titulo donde pone chef y demas*/
+    position: relative;
+    max-width: 500px;
+    text-align: center;
+}
+.contenido .titulobox h2{
+    font-size: 2em;
+    text-transform: uppercase;
+    color: #fff;
+}
+.contenido .titulobox h2 span{
+    padding: 0 10px;
+    font-family: 'dune';
+    font-weight: 600;
+    border-radius: 20px;
+    color: #7a6444;
+}
+.contenido .titulobox p{
+    font-size: 1em;
+    line-height: 1.5;
+    color: #fff;
+    font-family: 'dune';
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.contenido .titulobox a{ /*para el botton de sobre mi*/
+    position: absolute;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    background: #ffffff58;
+    top: 40%;
+    left: -1000px;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    margin:left 30px;
+    border-radius: 20px;
+    letter-spacing: 8px;
+    transition: 0.5s;
+}
+.contenido .titulobox a:hover{
+    color: #fff;
+    background: black;
+    transition: 0.5s;
+}
+.contenido .imgbox{
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    margin-top: -50px;
+    z-index: -5;
+}
+.contenido .imgbox img{
+    height:80vh;
+}
+.contenido .imgbox img:hover{
+    height:80vh;
+}
+/*copyrigth*/
+.copyright{
+    position: fixed;
+    bottom:0px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    padding: 10px;  
+    color:white;
+    margin-bottom: 5%;
+}
+.copyright p{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    margin-left: 100px;
+}
+.redesSociales{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px 30px;
+    list-style: none;
+}
+.redesSociales{
+    padding: 10px;
+}
+.redesSociales li a{
+    color: #fff;
+    font-size: 2.5em;
+    transition: 0.3s;
+}
+.redesSociales li:hover a{
+    color: rgba(178, 106, 13, 0.891);
+}
+/**********/
+/*circulo*/
+/* .circulo{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: rgba(2, 122, 108,0.386);
+    clip-path: circle(650px at right 800px);
+    width: 100%;
+    height: 100%;
+    z-index: -1000;
+} */
+/* contenedor de planetas */
+.planetas{
+    /* pricipal de planetas */
+    display:  flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+}
+/* Estilo general para los planetas */
+.planeta {
+    position: absolute;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    transform: translate(-50%, -50%);
+     /* Centra el texto */
+}
+/* Posiciones específicas de cada planeta */
+.planeta.venus {
+    /* venus */
+    top: 10%;
+    left: 19%;
+    color: white;
+    background: #ffffff58;
+    border-radius: 20px;
+    letter-spacing: 8px;
+    transition: 0.5s;
+}
+
+.planeta.riff {
+    /* riff */
+    top: 10%;
+    left: 53%;
+    color: white;
+    background: #ffffff58;
+    border-radius: 20px;
+    letter-spacing: 8px;
+    transition: 0.5s;
+}
+
+.planeta.marte {
+    /* marte */
+    top: 20%;
+    left: 80%;
+    color: white;
+    background: #ffffff58;
+    border-radius: 20px;
+    letter-spacing: 8px;
+    transition: 0.5s;
+}
+
+.planeta.tierra{
+    /* tierra */
+    top: 80%;
+    left: 48%;
+    background: #ffffff58;
+    border-radius: 20px;
+  
+}
+ .planeta.sobre_mi{
+
+    top: 75%; 
+    left: 14%; 
+    color: white;
+    background: #ffffff58;
+    border-radius: 20px;
+    letter-spacing: 8px;
+    transition: 0.5s;
+  
+}
+.menu-hamburguesa{
+    display: none;
+    z-index: 1000;
+}
+/* Estilos para el menú hamburguesa */ 
+
+
+/* Estilo del menú desplegable */
+.menu-hamburguesa {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 20px; /* Ajusta según tu diseño */
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+.menu-icon {
+    font-size: 24px; /* Tamaño del ícono */
+    color: white; /* Color del ícono */
+    cursor: pointer;
+}
+
+.menu-desplegable {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    background: #333;
+    list-style: none;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.menu-desplegable li {
+    margin: 10px 0;
+}
+
+.menu-desplegable li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    padding: 5px 10px;
+    display: block;
+    transition: background 0.3s;
+}
+
+.menu-desplegable li a:hover {
+    background: #444;
+    border-radius: 5px;
+}
+#ckbox {
+    position: absolute; 
+    opacity: 0; 
+    pointer-events: none; 
+}
+/* Mostrar el menú desplegable cuando el checkbox está marcado */
+#ckbox:checked ~ .menu-desplegable {
+    display: block;
+}
+@media(max-width:1020px) {
+    .planetas {
+        display: none;
+        position: absolute;
+        top: 10px;
+        left: 20px;
+    }
+
+    .menu-hamburguesa {
+        display: block; /* Muestra el menú hamburguesa */
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+    .menu-desplegable{
+        top: 50px;
+        left: 10px;
+    }
+    footer {
+        text-align: center;
+        padding: 10px;
+        font-size: 0.9em;
+    }
+   
+   
+}
+/********************************************************************************************/

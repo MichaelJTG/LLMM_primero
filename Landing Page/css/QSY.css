@@ -1,0 +1,232 @@
+:root {
+    --primary: #a9b9424a;
+    --secundary: #2e4469;
+    --background: #35495e;
+    --black-text: rgb(61, 61, 61);
+    --white-text: #fff;
+    --button-hover: black;
+}
+@font-face {
+    font-family: 'dune' ;
+    src: url('../font/Dune_Rise.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'dune';
+    list-style: none;
+}
+body{
+    display: flex;
+    /*propiedades para alinear y ajustar mejor las cartas*/
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-evenly;
+    min-height: 100vh;
+    background-image: url(../img/amarillo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.card{
+    position: relative;/*propiedades para las cartas*/
+    width: 300px;
+    height: 350px;
+    margin-bottom: 30px;
+    /*aplicar margenes de las cartas*/
+    z-index: 1;
+}
+.card .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.card .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+
+}
+.card .front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /*indica como el contenido de un elemento debera ser redimencionas
+    para ajustarse a su contenid*/
+    object-fit: cover;
+}
+.card .front h3{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+.card .back{
+    transform: perspective(600px) rotateY(180deg);
+    background-color: #fff;
+    padding: 15px;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.card .back .link{
+    border-top: 1px solid #000;
+    height: 50px;
+    line-height: 50px;
+}
+.card .back .link a{
+    color: #f3f3f3;
+}
+.card .back h3{
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+.card .back p{
+    letter-spacing: 1px;
+}
+.card:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+.card:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
+
+nav {
+    background-color: var(--primary);
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header h1 {
+    color: var(--white-text);
+    font-size: 2rem;
+    letter-spacing: 0.7rem;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    border-right: solid .1rem var(--black-text);
+}
+
+nav ul li:last-child {
+    border-right: none;
+}
+
+nav ul li a {
+    color: var(--white-text);
+    font-size: 1.2rem;
+    padding: 0.8rem 1rem;
+    text-transform: uppercase;
+}
+
+nav ul li:hover {
+    background-color: var(--button-hover);
+    transition: all 0.3s;
+}
+
+.drawer {
+    color: var(--white-text);
+    float: left;
+    cursor: pointer;
+    display: none;
+    margin-left: 1rem;
+    border: solid 0.1rem var(--white-text);
+    padding: .2rem;
+    border-radius: .1rem;
+}
+
+#ckbox {
+    display: none;
+}
+
+@media(max-width:992px) {
+    nav {
+        justify-content: flex-start;
+        z-index: 1000;
+        position: fixed
+    }
+    .drawer {
+        display: block;
+    }
+    nav h1 {
+        margin-left: 1rem;
+    }
+    ul {
+        position: fixed;
+        width: 50%;
+        height: 100vh;
+        background-color: var(--background);
+        top: 10vh;
+        left: -100%;
+        text-align: left;
+        transition: all .5s;
+        display: flex;
+        flex-direction: column;
+        align-content: stretch;
+    }
+    nav ul li {
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        padding-left: 2rem;
+        border-bottom: solid .1rem rgba(201, 196, 196, 0.4);
+    }
+    #ckbox:checked~.menu-box {
+        left: 0;
+    }
+}
+@media(max-width:576px) {
+    nav {
+        justify-content: flex-start;
+    }
+    .drawer {
+        display: block;
+    }
+    nav h1 {
+        margin-left: 1rem;
+    }
+    ul {
+        position: fixed;
+        width: 50%;
+        height: 100vh;
+        background-color: var(--background);
+        top: 10vh;
+        left: -100%;
+        text-align: left;
+        transition: all .5s;
+        display: flex;
+        flex-direction: column;
+        align-content: stretch;
+    }
+    nav ul li {
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        padding-left: 2rem;
+        border-bottom: solid .1rem rgba(201, 196, 196, 0.4);
+    }
+    #ckbox:checked~.menu-box {
+        left: 0;
+    }
+}

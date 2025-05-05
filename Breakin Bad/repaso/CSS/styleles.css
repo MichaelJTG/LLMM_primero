@@ -1,0 +1,42 @@
+:root{
+    box-sizing: border-box ;
+    margin: 0;
+    padding: 0;
+    
+}
+
+table{
+    width: 80%;
+    border: 1px solid black;
+
+}
+
+td{
+    background-color: lightgrey;
+    width: 25%;
+}
+
+img{
+    width: 100% 100%;
+}
+@font-face{
+    font-family: pokemon;
+    src: url(../../PokemonSolid.ttf);
+}
+
+h1{
+    font-family: 'pokemon';
+    color:yellow;
+    text-shadow:  #3a5da8 1.5px 5px;
+    font-size: 3rem;
+    text-align: center;
+}
+body{
+    background-image: url(../img/OIP.jpeg);
+    background-size: cover;
+
+}
+
+td#charmeleon{
+    background-image:url(../img/charmeleon.png) ;
+}

@@ -1,0 +1,89 @@
+:root{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+
+}
+:root {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+body {
+    background-image: url('../img/fondo.jpg');
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+h1 {
+    font-family: 'Pokemon';
+    color: yellow;
+    text-shadow: -1px 0 blue, 0 3px blue, 1px 0 blue, 0 -1px blue;
+    font-size: 3rem;
+    text-align: center;
+}
+
+table {
+    width: 80%;
+    border: 1px solid black;
+    margin: auto;
+}
+
+td {
+    background-color: lightgray;
+    width: 25%;
+    text-align: center;
+}
+
+img.pokemon {
+    height: 150px;
+}
+
+.nombre {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+tr#con_imagen_de_fondo {
+    height: 250px;
+}
+
+tr#con_imagen_de_fondo td {
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 10%;
+    background-position: 50%;
+}
+tr#Tabla_con_img{
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 10%;
+    background-position: 50%;
+}
+td#Rayman{
+    background-image:url(../img/rayman.png) ;
+    height: 50px
+
+}
+td#guacamele{
+    background-image:url(../img/guacamelee-psn-2013721193132_1.jpg) ;
+    height: 50px
+
+}
+td#sonic_Racing{
+    background-image:url(img/sonic_carreras.jpg) ;
+    height: 50px
+
+}
+td#one_piece{
+    background-image:url(img/one_piece.jpg) ;
+    height: 50px
+
+}
+td#Ratchet{
+    background-image: url(img/the-ratchet-clank-trilogy--2014630111417_1.jpg);
+    height: 50px
+
+}

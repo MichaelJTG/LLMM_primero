@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Para el icono del menú-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <title>Web Responsive</title>
+</head>
+
+<body>
+    <!--Section 1-->
+    <section class="section">
+        <!--Container: caja principal que contendrá todos los elementos de mi página web-->
+        <div class="container">
+            <!--header: contendrá el título de la página web (e incluso puede tener
+        un logo y el menú de navegación representado en una etiqueta nav)-->
+            <header class="rojo">
+                <nav>
+                    <input type="checkbox" id="ckbox">
+                    <label for="ckbox" class="drawer">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </label>
+                    <h1> La costurera soñadora </h1>
+                    <ul class="menu-box">
+                        <li>
+                            <a href="#quienes_somos">Quienes somos</a>
+                        </li>
+                        <li>
+                            <a href="#areas_trabajo">Areas de trabajo</a>
+                        </li>
+                        <li>
+                            <a href="#contacto">Contactos</a>
+                        </li>
+                        <li>
+                            <a href="./index.html">Home</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <!-- main: caja que contendrá las secciones más importantes de mi web: imágenes, 
+         texto explicativo,etc. -->
+            <main>
+                <section class="main_text">
+                    <div>
+                        <h1 class="rojo">Web corporativa</h1>
+                        <h3>Creacion a medidas de vestidos y trajes para caballeros</h3>
+                    </div>
+                    <p>
+                        En nuestra empresa, nos especializamos en la creación de vestidos únicos, diseñados a partir de
+                        tus ideas y
+                        preferencias. Cada vestido es exclusivo, lo que garantiza que no encontrarás otro igual. Además,
+                        todos nuestros modelos están equipados con bolsillos, brindando comodidad y funcionalidad para
+                        cada ocasión.
+                    </p>
+                    <p>
+                        Para nuestros trajes de caballeros, ofrecemos un servicio de confección a medida que involucra
+                        al cliente en cada
+                        etapa del proceso. Desde la selección del tejido hasta la elección del color, trabajamos juntos
+                        para crear un traje
+                        que refleje tu estilo personal y se ajuste perfectamente a tus necesidades
+                    </p>
+                    <p>
+                        Contamos con una red de aproximadamente 600 proveedores de tejidos, todos ellos 
+                        seleccionados cuidadosamente por su compromiso con la más alta calidad y la 
+                        artesanía. Cada uno de nuestros tejidos es una obra maestra que combina tradición 
+                        y modernidad, ofreciendo a nuestros clientes una amplia variedad de opciones que se 
+                        adaptan a sus necesidades y gustos.
+                    </p>
+                    <p>
+                        Además, trabajamos con proveedores de mercería que aportan originalidad y distinción 
+                        a nuestras colecciones. Desde botones únicos hasta cintas y adornos, cada accesorio 
+                        está diseñado para complementar nuestras prendas y darles ese toque especial que las 
+                        hace destacar.
+                    </p>
+
+                </section>
+                <section class="images">
+                    <img src="img/vestidos.jpg" alt="">
+                    <img src="img/img2.jpeg" alt="">
+                    <img src="img/img3.jpeg" alt="">
+                    <img src="img/img4.jpeg" alt="">
+                </section>
+            </main>
+            <!-- section: caja que contendra los artículos o noticias relevantes -->
+            <section class="novedades">
+                <h2 class="rojo">Novedades</h2>
+                <article>
+                    <h3>Ultimo comentario</h3>
+                    <h4>Gracias por el diseño lo amo!!!</h4>
+                    <p class="comentarios">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolores sit
+                        quisquam voluptas esse rem, nostrum, fugit sapiente repudiandae pariatur laudantium corrupti
+                        quibusdam aspernatur, ab consequuntur optio. In, sit error.</p>
+                </article>
+                <article>
+                    <h3>Ultimo pedido</h3>
+                    <h4>50 metros de seda estampado</h4>
+                    <p class="comentarios">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolores sit
+                        quisquam voluptas esse rem, nostrum, fugit sapiente repudiandae pariatur laudantium corrupti
+                        quibusdam aspernatur, ab consequuntur optio. In, sit error.</p>
+                </article>
+                <article>
+                    <h3>Novedades</h3>
+                    <h4>Llego un tejido espectacular desde </A>Asia</h4>
+                    <p class="comentarios">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolores sit
+                        quisquam voluptas esse rem, nostrum, fugit sapiente repudiandae pariatur laudantium corrupti
+                        quibusdam aspernatur, ab consequuntur optio. In, sit error.</p>
+                </article>
+            </section>
+        </div>
+        <script>
+            /* Icono del menu. Vamos a darle funcionalidad para hacer que se oculte
+                     o aparezca  según el tamaño de la ventana*/
+            $(function () {
+                //Captura del evento para mostrar u ocultar el menu
+                $(".icon").click(function () {
+                    $(".menu_item").toggle();
+                });
+                $(window).resize(function () {
+                    var anchura = $(this).width();
+                    if (anchura > 576) {
+                        $(".menu_item").show();
+                    }
+                });
+            }); 
+        </script>
+    </section>
+    <!-- section 2 -->
+    <section id="quienes_somos">
+        <div class="container">
+            <!--header: contendrá el título de la página web (e incluso puede tener
+            un logo y el menú de navegación representado en una etiqueta nav)-->
+            <header class="rojo">
+                <nav>
+                    <input type="checkbox" id="ckbox">
+                    <label for="ckbox" class="drawer">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </label>
+                    <h1> Quienes somos</h1>
+                    <ul class="menu-box">
+                        <li>
+                            <a href="#quienes_somos">Quienes somos</a>
+                        </li>
+                        <li>
+                            <a href="#areas_trabajo">Areas de trabajo</a>
+                        </li>
+                        <li>
+                            <a href="#contacto">Contactos</a>
+                        </li>
+                        <li>
+                            <a href="./index.html">Home</a>
+                        </li>
+                    </ul>
+            </header>
+            <!-- main: caja que contendrá las secciones más importantes de mi web: imágenes, 
+             texto explicativo,etc. -->
+            <main>
+                <section class="main_text">
+                    <div>
+                        <!-- <h1 class="rojo">Web corporativa</h1>-->
+                        <h3>Creacion a medidas de vestidos y trajes para caballeros</h3>
+                    </div>
+                    <p>
+                        Nuestra pasión por el mundo textil va más allá
+                        de simplemente confeccionar prendas. Nos dedicamos 
+                        a crear productos excepcionales que reflejan la 
+                        dedicación y el cuidado que ponemos en cada detalle.
+                        Nuestros valores fundamentales son el corazón de 
+                        nuestra empresa y guían cada una de nuestras acciones:
+                    </p>
+                    <p>
+                        <b>Artesanía a Mano:</b> Creemos que cada prenda tiene una historia
+                        que contar. Por eso, nos enorgullece ofrecer confecciones 
+                        elaboradas a mano, donde cada puntada es un reflejo del talento 
+                        y la pasión de nuestros artesanos. La atención al detalle es nuestra
+                        firma.
+                    </p>
+                    <p>
+                        <b>Honestidad:</b> La transparencia es esencial en nuestra relación con clientes
+                        y proveedores. Nos comprometemos a ofrecer productos de la más alta calidad,
+                        sin comprometer nuestros principios éticos ni la confianza que nuestros clientes
+                        depositan en nosotros.
+                    </p>
+                    <p>
+                        <b>Sostenibilidad:</b> Nos esforzamos por ser responsables con el medio ambiente. Utilizamos 
+                        materiales sostenibles y prácticas de producción que minimizan nuestro impacto ecológico, 
+                        garantizando un futuro más verde para las próximas generaciones.
+                    </p>
+                    <p>
+                        <b>Innovación:</b> En un mundo en constante cambio, valoramos la creatividad y la innovación. 
+                        Nos mantenemos al día con las tendencias del sector y buscamos constantemente nuevas formas 
+                        de mejorar nuestros productos y servicios.
+                    </p>
+                    <p>
+                        En la costurera soñadora, cada prenda es más que un simple artículo; es una manifestación de 
+                        nuestros valores y nuestro compromiso con la calidad. Te invitamos a descubrir nuestras colecciones 
+                        y experimentar la diferencia que hacen los detalles hechos a mano.
+                    </p>
+
+                </section>
+                <section class="images">
+                    <img src="img/broche.jpg" alt="">
+                    <img src="img/maquina_moderna.jpg" alt="">
+                    <img src="img/maquinaria_antigua.jpg" alt="">
+                    <img src="img/seda.jpg" alt="">
+                </section>
+            </main>
+            <!-- section: caja que contendra los artículos o noticias relevantes -->
+            <section class="novedades">
+                <h2 class="rojo">Novedades</h2>
+                <article>
+                    <h3>Ultimo comentario</h3>
+                    <h4>Gracias por el diseño lo amo!!!</h4>
+                    <p class="comentarios">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolores sit
+                        quisquam voluptas esse rem, nostrum, fugit sapiente repudiandae pariatur laudantium corrupti
+                        quibusdam aspernatur, ab consequuntur optio. In, sit error.</p>
+                </article>
+                <article>
+                    <h3>Ultimo pedido</h3>
+                    <h4>50 metros de seda estampado</h4>
+                    <p class="comentarios">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolores sit
+                        quisquam voluptas esse rem, nostrum, fugit sapiente repudiandae pariatur laudantium corrupti
+                        quibusdam aspernatur, ab consequuntur optio. In, sit error.</p>
+                </article>
+                <article>
+                    <h3>Novedades</h3>
+                    <h4>Llego un tejido espectacular desde </A>Asia</h4>
+                    <p class="comentarios">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolores sit
+                        quisquam voluptas esse rem, nostrum, fugit sapiente repudiandae pariatur laudantium corrupti
+                        quibusdam aspernatur, ab consequuntur optio. In, sit error.</p>
+                </article>
+            </section>
+        </div>
+    </section>
+
+
+    <!-- section 3 -->
+    <section id="areas_trabajo">
+        <div class="container">
+            <!--header: contendrá el título de la página web (e incluso puede tener
+            un logo y el menú de navegación representado en una etiqueta nav)-->
+            <header class="rojo">
+                <nav>
+                    <input type="checkbox" id="ckbox">
+                    <label for="ckbox" class="drawer">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </label>
+                    <h1> Areas de trabajo</h1>
+                    <ul class="menu-box">
+                        <li>
+                            <a href="#quienes_somos">Quienes somos</a>
+                        </li>
+                        <li>
+                            <a href="#areas_trabajo">Areas de trabajo</a>
+                        </li>
+                        <li>
+                            <a href="#contacto">Contactos</a>
+                        </li>
+                        <li>
+                            <a href="./index.html">Home</a>
+                        </li>
+                    </ul>
+            </header>
+            <!-- main: caja que contendrá las secciones más importantes de mi web: imágenes, 
+             texto explicativo,etc. -->
+            <main>
+                <section class="main_text">
+                    <div>
+                        <h1 class="rojo">Web corporativa</h1>
+                        <h3>Bienvenido a la costurera soñadora</h3>
+                    </div>
+                    <p>
+                        En nuestra empresa, nos especializamos en la creación de vestidos a medida
+                        y trajes de caballeros, ofreciendo a nuestros clientes la oportunidad de lucir
+                        prendas únicas que reflejan su estilo personal y se adaptan perfectamente a su
+                        figura. Nuestro compromiso con la calidad y la artesanía se manifiesta en cada prenda 
+                        que confeccionamos, utilizando solo los mejores materiales y técnicas de costura.
+                    </p>
+                    <p>
+                        Además de nuestras creaciones a medida, también ofrecemos una amplia gama de tejidos
+                        y máquinas de coser, desde modelos caseros hasta industriales. Nuestro objetivo es 
+                        proporcionar todo lo que necesitas para llevar a cabo tus proyectos de costura, 
+                        sin importar tu nivel de experiencia
+                    </p>
+                    <p>
+                        En la costurera soñadora, trabajamos con proveedores de mercería cuidadosamente 
+                        seleccionados, asegurando que tengas acceso a los mejores accesorios y suministros 
+                        para complementar tus creaciones.
+                    </p>
+                    
+                    <p>
+                        Ya seas un diseñador experimentado o alguien que está comenzando en el mundo de la costura, 
+                        estamos aquí para ayudarte en cada paso del camino. Descubre cómo podemos hacer 
+                        realidad tus ideas y acompáñanos en esta emocionante aventura textil.
+                    </p>
+
+                </section>
+                <section class="images">
+                    <img src="img/maquina.jpg" alt="">
+                    <img src="img/telas.jpg" alt="">
+                    <img src="img/merceria.jpg" alt="">
+                    <img src="img/clothes-1839935_1280.jpg" alt="">
+                </section>
+            </main>
+            <!-- section: caja que contendra los artículos o noticias relevantes -->
+            <section class="novedades">
+                <h2 class="rojo">Novedades</h2>
+                <article>
+                    <h3>Ultimo comentario</h3>
+                    <h4>Gracias por el diseño lo amo!!!</h4>
+                    <p class="comentarios">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolores sit
+                        quisquam voluptas esse rem, nostrum, fugit sapiente repudiandae pariatur laudantium corrupti
+                        quibusdam aspernatur, ab consequuntur optio. In, sit error.</p>
+                </article>
+                <article>
+                    <h3>Ultimo pedido</h3>
+                    <h4>50 metros de seda estampado</h4>
+                    <p class="comentarios">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolores sit
+                        quisquam voluptas esse rem, nostrum, fugit sapiente repudiandae pariatur laudantium corrupti
+                        quibusdam aspernatur, ab consequuntur optio. In, sit error.</p>
+                </article>
+                <article>
+                    <h3>Novedades</h3>
+                    <h4>Llego un tejido espectacular desde </A>Asia</h4>
+                    <p class="comentarios">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolores sit
+                        quisquam voluptas esse rem, nostrum, fugit sapiente repudiandae pariatur laudantium corrupti
+                        quibusdam aspernatur, ab consequuntur optio. In, sit error.</p>
+                </article>
+            </section>
+        </div>
+    </section>
+    <!-- section 4 -->
+    <section class="section_contacto" id="contacto">
+        <header class="rojo">
+            <nav>
+                <input type="checkbox" id="ckbox">
+                <label for="ckbox" class="drawer">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </label>
+                <h1> La costurera soñadora </h1>
+                <ul class="menu-box">
+                    <li>
+                        <a href="#quienes_somos">Quienes somos</a>
+                    </li>
+                    <li>
+                        <a href="#areas_trabajo">Areas de trabajo</a>
+                    </li>
+                    <li>
+                        <a href="#contacto">Contactos</a>
+                    </li>
+                    <li>
+                        <a href="./index.html">Home</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="form_registro section">
+            <form action="mailto:michael13guadalajara@gmail.com" method="post" enctype="text/plain">
+                <h4>Formulario de Contacto</h4>
+                <label for="nombre">Nombre</label>
+                <input class="datos" type="text" name="nombre" id="nombre" placeholder="ingresa tu nombre " required />
+                <label for="apellido">apellido</label>
+                <input class="datos" type="text" name="apelillo" id="apellido" placeholder="ingresa tu apelillo "
+                    required />
+                <label for="correo">Correo</label>
+                <input class="datos" type="text" name="correo" id="correo" placeholder="ingresa tu correo " required />
+                <label for="Telefono">Telefono</label>
+                <input class="datos" type="text" name="Telefono" id="Telefono" placeholder="+xx-xxx-xxx-xxx ">
+                <label for="Pais">Pais</label>
+                <input class="datos" type="text" name="Pais" id="Pais" placeholder="Pais desde donde nos contactas... "
+                    required />
+                    <br><b>Servicios</b>
+                    <br>Selecciona lo que mas se adapte a tu pedido:
+                    <select name="pedidos">
+                        <option value="1">Confeccion a medida</option>
+                        <option value="2">Pedido mayorista</option>
+                        <option value="3">tejidos</option>
+                        <option value="4">Merceria</option>
+                        <option value="5">Maquinaria</option>
+                        <option value="6">Otros</option>
+                    </select>
+                <label for="Motivo">Motivo de contacto</label>
+                <textarea class="text" name="Motivo" id="Motivo" placeholder="Describe el motivo de tu contacto"
+                    required></textarea>
+                <input class="botones" type="button" value="Enviar" />
+                <input class="botones" type="button" value="Borrar" />
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
